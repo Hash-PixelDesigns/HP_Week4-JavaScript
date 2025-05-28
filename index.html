@@ -206,6 +206,45 @@
                 username + "<br>Password entered:" + password;
             }
         </script>
+    </div>
+
+    <!--Lesson 11-->
+
+    <div class="lesson">
+         <h2>Lesson 11: Mini Project - Login Form Part 2</h2>
+         <p><strong>Concept:</strong>Complete login verification with functions and conditions</p>
+         <p><en>Try Username: AppAcademy, password:12@cademy</en></p>
+
+         <form>
+            <label for="usernameInput11">Username:</label>
+            <Input type="text" id="usernameInput11"/><br><br>
+
+            <label for="passwordInput11">Password:</label>
+            <input type="password" id="passwordInput11"/> <br><br>
+
+            <button type="button" on click="verifyuser11()">Login</button>
+        </form>
+
+        <div class="output" id="message11">Enter credentials and click Login</div>
+
+        <script>
+            function  verifyUser11() {
+                var username = document.getElementById("usernameInput11").value;
+                var password = document.getElementById("passwordInput11").value;
+                checkUserCreds(username, password);
+            }         
+
+            function checkUserCreds(username, password) {
+                var adminUsername = "AppAcademy"
+                var adminPassword = "12@cademy";
+
+                if (username == adminUsername && password == adminPassword) {
+                    document.getElementById("message11").innerHTML = "Correct.Logging you in...";
+                }
+            }
+            
+        </script>
+    </div>
 
 
 
