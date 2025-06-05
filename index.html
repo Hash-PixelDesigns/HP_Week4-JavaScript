@@ -134,7 +134,7 @@
     <!--Lesson 8-->
     <div class="lesson">
         <h3>Lesson 8: Function Return</h3>
-        <p><strong>Concept:</strong>Functions returning avlues to be used elsewher</p>
+        <p><strong>Concept:</strong>Functions returning avlues to be used elsewhere</p>
 
         <button onclick="runlesson8()">Calculate and Display Result</button>
         <div class="output" id="addition8">Result will show here</div>
@@ -152,9 +152,29 @@
 
     <!--Lesson 9-->
     <div class="lesson">
-        <h3>Lesson 9: Function Return</h3>
-        <p><strong>Concept:</strong>Functions returning avlues to be used elsewher</p>
+        <h3>Lesson 9: Variable Scopes</h3>
+        <p><strong>Concept:</strong>Understanding where variables can be used</p>
 
+        <button onclick="demonstrateLocalScope()">Demonstrate Local Scope</button>
+        <button onclick="demonstrateScope()">Demonstrate Variable Scope</button>
+        <div class="output" id="scopeOutput">Click button to see variable scope in action</div>
+
+        <script>
+            var globalVariable = "I am a Global Variable";
+
+            function demonstrateScope() {
+                var localVariable = "I am a local Variable";
+                document.getElementById("scopeOutput").innerHTML = 
+                "Global: " + globalVariable + "<br>" +
+                "Local: " + localVariable + "<br>" +
+                "Local variable only exist inside their function";
+            }
+
+            function demonstrateLocalScope(){
+                document.getElementById("scopeOutput").innerHTML = localVariable;
+            }
+        </script>
+    </div>
 
 
 
