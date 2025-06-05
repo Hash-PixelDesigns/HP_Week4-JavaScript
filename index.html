@@ -179,14 +179,14 @@
     <!--Lesson 10-->
     <div class="lesson">
         <h3>Lesson 10: Mini Project Login Form Part 1</h3>
-        <p><strong>Concept:</strong>Getting user inputr from form elements</p>
+        <p><strong>Concept:</strong>Getting user inputs from form elements</p>
         
         <form>
             <label for="usernameInput10">Username: </label>
-            <input type="text" id="usernameInput10"> <br> <br>
+            <input type="text" id="usernameInput10"/> <br> <br>
 
             <label for="passwordInput10">Password: </label>
-            <input type="password" id="passwordInput10"> <br> <br>
+            <input type="password" id="passwordInput10"/> <br> <br>
 
             <button type="button" onclick="verifyuser10()">Get Input Values</button>
         </form>
@@ -203,6 +203,40 @@
             }
         </script>
 
+    </div>
+    
+    <!--Lesson 11-->
+    <div class="lesson">
+        <h3>Lesson 11: Mini Project Login Form Part 2</h3>
+        <p><strong>Concept:</strong>Complete Login verification with functions and conditions</p>
+        <p><en>Try Username: AppAcademy, password:12@cademy</en></p>
+
+        <form>
+            <label for="usernameInput11">Username: </label>
+            <input type="text" id="usernameInput11"/> <br> <br>
+
+            <label for="passwordInput11">Password: </label>
+            <input type="password" id="passwordInput11"/> <br> <br>
+
+            <button type="button" onclick="verifyuser11()">Login</button>
+        </form>
+        <div class="output" id="message11"> Enter credentials and click Login</div>
+
+        <script>
+            function checkUserCreds(username,password){
+                var adminUsername = "AppAcademy";
+                var adminPassword = "12@cademy";
+
+                if (username == adminUsername && password == adminPassword) {
+                    document.getElementById("message11").innerHTML = "Correct Login,  You're In...";
+                } else {
+                    document.getElementById('message11').innerHTML = "Username or password is incorrect";
+                }
+            }
+        </script>
+    </div>
+
+    
 
 
 
