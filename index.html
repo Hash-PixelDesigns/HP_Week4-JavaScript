@@ -304,35 +304,67 @@
         </script>
     </div>
 
-    <!--Lesson 14-->
-    <div class="lesson">
-        <h3>Lesson 14: Numbers & Strings Part 2: Converting text to Numbers</h3>
-        <p><strong>Concept:</strong>Converting string input to Numbers for Calculations</p>
-        
+    <!-- Lesson 14 -->
+     <div class="lesson">
+        <h2>Lesson 14: Numbers and Strings Part 2 - Converting Text to Numbers</h2>
+        <p><strong>Concept:</strong> Converting string input to numbers for calculations</p>
+
         <input type="text" id="textNumber1" placeholder="Enter first number" value="10">
         <input type="text" id="textNumber2" placeholder="Enter second number" value="5">
-        <button onclick="convertandAdd()">Convert and Add</button>
-        <div class="output" id="coversionOutput">Enter numbers and click to see conversion in action</div>
-        
+        <button onclick="convertAndAdd()">Convert and Add</button>
+        <div class="output" id="conversionOutput">Enter 
+            numbers and click to see conversion in action</div>
+
         <script>
-            function convertandAdd() {
-                var input1 = document.getElementById ('textNumber1').value;
-                var input2 = document.getElementById ('textNumber2').value;
-               
-                //Without conversion(string Concatenation)
+            function convertAndAdd() {
+                var input1 = document.getElementById("textNumber1").value;
+                var input2 = document.getElementById("textNumber2").value;
+
+                //Without conversion (String concatenation)
                 var stringResult = input1 + input2;
 
                 //With conversion (number addition)
-                var numberResult = parseInt (input1) + parseInt(input2);
+                var numberResult = parseInt(input1) + parseInt(input2);
 
-                document.getElementById ('conversionOutput').innerHTML = 
-                "Without conversion: " + stringResult + "<br>" +
-                "With conversion: " + numberResult;
+                document.getElementById("conversionOutput").innerHTML = 
+                    "Without conversion: " + stringResult + "<br>" +
+                    "With conversion: " + numberResult;
             }
         </script>
     </div>
 
+    <!-- Lesson 15 -->
+     <div class="lesson">
+        <h2>Lesson 15: Numbers and Strings Part 3 - Avoiding Conversion Errors</h2>
+        <p><strong>Concept:</strong> Handling conversion errors and invalid input</p>
 
+        <input type="text" id="safeInput1" placeholder="Enter first number">
+        <input type="text" id="safeInput2" placeholder="Enter second number">
+        <button onclick="safeConvertAndAdd()">Safe Convert and Add</button>
+        <div class="output" id="safeOutput">Try entering both number and non-numbers 
+            for error handling</div>
+        
+        <script>
+            function safeConvertAndAdd() {
+                var input1 = document.getElementById("safeInput1").value;
+                var input2 = document.getElementById("safeInput2").value;
+
+                var num1 = parseInt(input1);
+                var num2 = parseInt(input2);
+
+                if (isNaN(num1) || isNaN(num2)) {
+                    document.getElementById("safeOutput").innerHTML = 
+                        "Error: Please enter valid numbers only!<br>" +
+                        "Input 1: '" + input1 + "' → " + (isNaN(num1) ? "Invalid" : "Valid") + "<br>" +
+                        "Input 2: '" + input2 + "' → " + (isNaN(num2) ? "Invalid" : "Valid");
+                } else {
+                    document.getElementById("safeOutput").innerHTML = 
+                        "Success! " + num1 + " + " + num2 + " = " + (num1 + num2)
+                }
+            }
+
+        </script>
+    </div>
 
 </body>
 </html>
